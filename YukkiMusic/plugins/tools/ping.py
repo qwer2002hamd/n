@@ -14,10 +14,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils import bot_sys_stats
-from YukkiMusic.utils.decorators.language import language
+from AnonXMusic import app
+from AnonXMusic.core.call import Anon
+from AnonXMusic.utils import bot_sys_stats
+from AnonXMusic.utils.decorators.language import language
 
 ### Commands
 PING_COMMAND = get_command("PING_COMMAND")
@@ -36,7 +36,7 @@ async def ping_com(client, message: Message, _):
         caption=_["ping_1"],
     )
     start = datetime.now()
-    pytgping = await Yukki.ping()
+    pytgping = await Anon.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
