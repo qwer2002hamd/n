@@ -1,8 +1,8 @@
 from config import START_IMG_URL as THUMBNAIL
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
+from AnonXMusic import app
+from AnonXMusic.misc import SUDOERS
 from pyrogram import filters
-from YukkiMusic.plugins.techzbots.strings import *
+from AnonXMusic.plugins.techzbots.strings import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 async def start_menu_private(message):
