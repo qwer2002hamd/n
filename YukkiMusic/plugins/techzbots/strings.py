@@ -1,4 +1,4 @@
-from YukkiMusic import app
+from AnonXMusic import app
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import MUSIC_BOT_NAME as BOT_NAME
 
