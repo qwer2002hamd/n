@@ -1,12 +1,12 @@
-from YukkiMusic.utils.inline.play import playlist_markup
+from AnonXMusic.utils.inline.play import playlist_markup
 import random
 import string
 from config import BANNED_USERS
-from YukkiMusic.plugins.techzbots.spotify import getsp_categories, getsp_categories_info
-from YukkiMusic import app, Spotify
+from AnonXMusic.plugins.techzbots.spotify import getsp_categories, getsp_categories_info
+from AnonXMusic import app, Spotify
 import pyrogram
 from pyrogram import filters
-from YukkiMusic.plugins.techzbots.strings import *
+from AnonXMusic.plugins.techzbots.strings import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
