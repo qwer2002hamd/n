@@ -18,14 +18,14 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.misc import db
-from YukkiMusic.utils import (Yukkibin, get_channeplayCB,
+from AnonXMusic import app
+from AnonXMusic.misc import db
+from AnonXMusic.utils import (Anonbin, get_channeplayCB,
                               seconds_to_min)
-from YukkiMusic.utils.database import (get_cmode, is_active_chat,
+from AnonXMusic.utils.database import (get_cmode, is_active_chat,
                                        is_music_playing)
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.inline import queue_back_markup, queue_markup
+from AnonXMusic.utils.decorators.language import language, languageCB
+from AnonXMusic.utils.inline import queue_back_markup, queue_markup
 
 ###Commands
 QUEUE_COMMAND = get_command("QUEUE_COMMAND")
@@ -216,7 +216,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             )
         if "🏷" in msg:
             msg = msg.replace("🏷", "")
-        link = await Yukkibin(msg)
+        link = await Anonbin(msg)
         med = InputMediaPhoto(
             media=link, caption=_["queue_3"].format(link)
         )
