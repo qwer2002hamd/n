@@ -12,11 +12,11 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (get_playmode, get_playtype,
+from AnonXMusic import app
+from AnonXMusic.utils.database import (get_playmode, get_playtype,
                                        is_nonadmin_chat)
-from YukkiMusic.utils.decorators import language
-from YukkiMusic.utils.inline.settings import playmode_users_markup
+from AnonXMusic.utils.decorators import language
+from AnonXMusic.utils.inline.settings import playmode_users_markup
 
 ### Commands
 PLAYMODE_COMMAND = get_command("PLAYMODE_COMMAND")
