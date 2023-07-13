@@ -11,15 +11,15 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
 from strings import get_string
-from YukkiMusic import YouTube, app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (get_cmode, get_lang,
+from AnonXMusic import YouTube, app
+from AnonXMusic.misc import SUDOERS
+from AnonXMusic.utils.database import (get_cmode, get_lang,
                                        get_playmode, get_playtype,
                                        is_active_chat,
                                        is_commanddelete_on,
                                        is_served_private_chat)
-from YukkiMusic.utils.database.memorydatabase import is_maintenance
-from YukkiMusic.utils.inline.playlist import botplaylist_markup
+from AnonXMusic.utils.database.memorydatabase import is_maintenance
+from AnonXMusic.utils.inline.playlist import botplaylist_markup
 
 
 def PlayWrapper(command):
