@@ -7,7 +7,7 @@
 #
 # All rights reserved.
 
-from YukkiMusic.plugins.techzbots.database.limitsdb import is_approved
+from AnonXMusic.plugins.techzbots.database.limitsdb import is_approved
 import os
 from random import randint
 
@@ -18,16 +18,16 @@ from pyrogram.types import (InlineKeyboardButton,
 
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from strings import get_command
-from YukkiMusic import Carbon, YouTube, app
-from YukkiMusic.utils.database import (delete_playlist, get_playlist,
+from AnonXMusic import Carbon, YouTube, app
+from AnonXMusic.utils.database import (delete_playlist, get_playlist,
                                        get_playlist_names,
                                        save_playlist)
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.inline.playlist import (botplaylist_markup,
+from AnonXMusic.utils.decorators.language import language, languageCB
+from AnonXMusic.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from YukkiMusic.utils.pastebin import Yukkibin
-from YukkiMusic.utils.stream.stream import stream
+from AnonXMusic.utils.pastebin import Anonbin
+from AnonXMusic.utils.stream.stream import stream
 
 # Command
 PLAYLIST_COMMAND = get_command("PLAYLIST_COMMAND")
@@ -56,7 +56,7 @@ async def check_playlist(client, message: Message, _):
         count += 1
         msg += f"\n\n{count}- {title[:70]}\n"
         msg += _["playlist_5"].format(duration)
-    link = await Yukkibin(msg)
+    link = await Anonbin(msg)
     lines = msg.count("\n")
     if lines >= 17:
         car = os.linesep.join(msg.split(os.linesep)[:17])
